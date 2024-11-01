@@ -16,7 +16,7 @@ export default function Page() {
         </div>
         <div className='flex items-center justify-center mt-8'>
           <ClerkLoaded>
-            <SignIn afterSignInUrl="/" path='/sign-in' />
+            <SignIn afterSignInUrl="/dashboard" path='/sign-in' />
           </ClerkLoaded>
           <ClerkLoading>
             <Loader2 className='animate-spin text-muted-foreground'/>
@@ -24,7 +24,7 @@ export default function Page() {
         </div>
       </div>
       <div className='h-full bg-[#146f50] hidden lg:flex items-center justify-center'>
-          <Image src={'/logo.png'} height={100} width={100} alt='Logo' />
+          <Image src={'/logo.png'} height={100} width={100} alt='Company Logo' />
       </div>
     </div>
   )

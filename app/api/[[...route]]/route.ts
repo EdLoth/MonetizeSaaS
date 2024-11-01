@@ -1,15 +1,13 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 
-import books from './books'
-import authors from './authors'
-
 export const runtime = 'edge';
 
 const app = new Hono().basePath('api')
 
-app.route("/authors", authors)
-app.route("/books", books)
+app.get("/hello", (c) => {
+  return c.json({ hello: "World" });
+})
 
 
 export const GET = handle(app)
